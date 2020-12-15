@@ -22,9 +22,11 @@ print("-----")
 
 #Output4Values
 
-a = ("1")
-b = ("2")
-c = ("3")
-d = ("4")
-print(a,b,c,d, sep=';', end=".Output complete!\n")  #sep= character value between spaces
-                                                    #end= statement to the end of the print output
+name = input("Enter your name: ")
+feeling = input("How do you feel meeting this person?: ")
+country = input("Where are you from? ")
+activity = input("Favourite activity?: ")
+print("Hello " + name + "!" " It is " + feeling + " to meet you!" " I am from " + country + " and I enjoy " + activity + " very much!", sep=';', end=" .Output complete!\n")
+
+#sep= character value between spaces
+#end= statement to the end of the print output

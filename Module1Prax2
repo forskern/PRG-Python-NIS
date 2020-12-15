@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+#Legal and Illegal Variable Names
+
+WeeklySummary = 1 # Legal variable name
+the variable = 2 # Illegal variable name (because of the spaces)
+myvalue = 3 # Legal variable name
+1stvalue = 4 # Illegal variable name (the first character of a variable name cannot be a digit)
+12345 = 5 # Illegal variable name (the first character of a variable name cannot be a digit)
+use_this_value = 6 # Legal variable name
+number1 = 7 # Legal variable name
+print(WeeklySummary, the variable, myvalue, 1stvalue, 12345, use_this_value, number1)
+
+#My House
+
+print("  X")
+print(" XXX")
+print("XXXXX")
+print("|   |")
+print("|   |")
+print("-----")
+
+#Output4Values
+
+a = ("1")
+b = ("2")
+c = ("3")
+d = ("4")
+print(a,b,c,d, sep=';', end=".Output complete!\n")  #sep= character value between spaces
+                                                    #end= statement to the end of the print output

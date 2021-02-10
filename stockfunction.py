@@ -50,8 +50,6 @@ class StockFunction:
 
     def func_stock_view(self):
         return self.product_list                                            # Returns overview of products in stock
-        for s in stock:
-            print(f'{s["id"]}\t{s["Name"]}\t{s["Available"]}\t\t{s["Price"]}\t{s["Original_Price"]}')
 
 # Customer Module
 

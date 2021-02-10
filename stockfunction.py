@@ -4,14 +4,14 @@
 from stockproduct import StockProduct
 import cgi
 data = cgi.FieldStorage()
-func_stock_add = data.getvalue('add_stock')
-func_stock_remove = data.getvalue('remove_stock')
-func_update = data.getvalue('update_stock')
-func_stock_view = data.getvalue('view_stock')
-add_to_cart = data.getvalue('cart_add')
-remove_from_cart = data.getvalue('cart_remove')
-display_cart = data.getvalue('cart_display')
-func_bill_invoice = data.getvalue('get_invoice')
+func_stock_add = data.getvalue("add_stock")
+func_stock_remove = data.getvalue("remove_stock")
+func_update = data.getvalue("update_stock")
+func_stock_view = data.getvalue("view_stock")
+add_to_cart = data.getvalue("cart_add")
+remove_from_cart = data.getvalue("cart_remove")
+display_cart = data.getvalue("cart_display")
+func_bill_invoice = data.getvalue("get_invoice")
 
 
 # Admin Module
@@ -25,6 +25,8 @@ class StockFunction:
     def func_stock_add(self, code, name, description, quantity, price):
         prod_name = StockProduct(code, name, description, quantity, price)  # Create new stock item
         self.product_list[prod_name.code] = prod_name                       # Add stock item to product list
+        if data.getvalue("add_stock") == 1:
+            func_stock_add()
 
     def func_stock_remove(self, code):
         for item in self.product_list:                                      # If item is present in product list
@@ -48,6 +50,8 @@ class StockFunction:
 
     def func_stock_view(self):
         return self.product_list                                            # Returns overview of products in stock
+        for s in stock:
+            print(f'{s["id"]}\t{s["Name"]}\t{s["Available"]}\t\t{s["Price"]}\t{s["Original_Price"]}')
 
 # Customer Module
 
@@ -104,7 +108,7 @@ if __name__ == '__main__':
               "Price": 19000}]
 
 
-print("Content-Type: text/html")
+print("Content-Type: text/html\n\n")
 print()
 print("<!DOCTYPE HTML>")
 print("<html>")
@@ -112,8 +116,8 @@ print("<head>")
 print("<title>Shopping Cart</title>")
 print("</head>")
 print("<body>")
-print("<h1>{} {}</h1>".format(add_stock, func_stock_add, func_stock_remove))
-print("<p>{}</p>".format(func_update))
+print("<h1>{} {} {} {}</h1>".format(func_stock_add, func_stock_remove, func_update, func_stock_view))
 print("<a href=\"shoppingcart.html\">Back</a>")
 print("</body>")
 print("</html>")
+print(stock)

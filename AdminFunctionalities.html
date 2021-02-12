@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Add to Stock</title>
+</head>
+    <body>
+<form method="POST" action="AdminPanel.py">
+    <div style="position:fixed; left:20px; top:1px"><h1>Add to Stock</h1>
+    <b>Name: </b><input type="text" name="name"/><br/><br>
+    <b>Price: </b><input type="text" name="price"/><br/><br>
+    <b>Available: </b><input type="text" name="available"/><br/><br>
+    <b>Description: </b><br/>
+<textarea name="description" rows="5" cols="50"></textarea><br/>
+<input type="submit" value="Submit"/>
+<form method="POST" action=".....">
+
+<div style="position:fixed; left:550px; top:1px"><h1>Current Products in Stock</h1>
+    <input type="checkbox" name="Audi e-tron" value="Audi e-tron"/> <b>Audi e-tron</b><br/>
+    <div style="margin-left: 25px;">
+              Name: Audi e-tron<br>
+              Description: Full-electrical model<br>
+              Available: <input type="number" min="1" max="99" step="1" value="10"/><br>
+              Price: 25000<br>
+    </div>
+    <input type="checkbox" name="Toyota Avensis" value="Toyota Avensis"/> <b>Toyota Avensis</b><br/>
+    <div style="margin-left: 25px;">
+              Name: Toyota Avensis<br>
+              Description: Mid-size/large family car<br>
+              Available: <input type="number" min="1" max="99" step="1" value="7"/><br>
+              Price: 28600<br>
+    </div>
+    <input type="checkbox" name="Suzuki KingQuad" value="Suzuki KingQuad"/> <b>Suzuki KingQuad</b><br/>
+    <div style="margin-left: 25px;">
+              Name: Suzuki KingQuad<br>
+              Description: Special edition ATV<br>
+              Available: <input type="number" min="1" max="99" step="1" value="22"/><br>
+              Price: 8000<br>
+    </div>
+    <input type="checkbox" name="1931 Harley Davidson" value="1931 Harley Davidson"/> <b>1931 Harley Davidson</b><br/>
+    <div style="margin-left: 25px;">
+              Name: 1931 Harley Davidson<br>
+              Description: Model D, Breakout Black<br>
+              Available: <input type="number" min="1" max="99" step="1" value="10"/><br>
+              Price: 11000<br>
+    </div>
+    <input type="checkbox" name="Nissan Leaf" value="Nissan Leaf"/> <b>Nissan Leaf</b><br/>
+    <div style="margin-left: 25px;">
+              Name: Nissan Leaf<br>
+              Description: Pure electric vehicle powered only by electricity<br>
+              Available: <input type="number" min="1" max="99" step="1" value="12"/><br>
+              Price: 19000<br>
+    </div><br>
+  <div style="margin-left: 25px;"> <input type="submit" value="Update Stock Quantity"/><br><br>
+  <input type="submit" value="Remove Product from Stock"/><br><br>
+</form>
+</body>
+</html>
